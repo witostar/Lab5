@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bangkok in Sound</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Bangkok in Sound</h1>
+  <p>Click a photo to play its sound. Move your mouse left or right to mix the two sounds.</p>
+
+  <div class="row">
+    <div class="scene" id="streetBox">
+      <img src="images/market.jpg" alt="A busy Bangkok street market" id="streetImg" onclick="toggleStreet()">
+      <h2 id="streetLabel">Street Market</h2>
+      <audio id="street" src="Street.mp3" controls loop></audio>
+    </div>
+
+    <div class="scene" id="trainBox">
+      <img src="images/train.jpg" alt="A BTS Skytrain in Bangkok" id="trainImg" onclick="toggleTrain()">
+      <h2 id="trainLabel">BTS Skytrain</h2>
+      <audio id="train" src="Train.mp3" controls loop></audio>
+    </div>
+  </div>
+
+  <div class="buttons">
+    <button onclick="playBoth()">Play Soundscape</button>
+    <button onclick="stopBoth()">Stop</button>
+  </div>
+
+  <p id="mix">Mix: 50% street / 50% train</p>
+
+  <p class="credits">
+    Photos: Evan Krause and Umpholphat Dangam on Unsplash.
+    Sounds: The Sound Pack Tree (Bangkok Street Ambience, Bangkok Train Station Ambience).
+  </p>
+
+  <script src="script.js"></script>
+</body>
+</html>
